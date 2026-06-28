@@ -16,7 +16,7 @@ resource "aws_instance" "web_server" {
   subnet_id                   = aws_subnet.public_subnet.id
   iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
   associate_public_ip_address = true
-  key_name = "cloudops-key"
+  key_name                    = "cloudops-key"
   lifecycle {
     ignore_changes = [ami]
   }
